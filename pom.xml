@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!--
 		PMS consists of two major parts: PMS itself and the third party software needed to
@@ -32,7 +32,7 @@
 	<name>PS3 Media Server</name>
 	<packaging>jar</packaging>
 	<version>1.90.2-SNAPSHOT</version> <!-- XXX don't forget to update project.version.short below -->
-	<url>http://www.ps3mediaserver.org/</url>
+	<url>https://www.ps3mediaserver.org/</url>
 	<inceptionYear>2008</inceptionYear>
 
 	<!-- this is not required, but is recommended for plugin version checks -->
@@ -42,13 +42,13 @@
 
 	<organization>
 		<name>PS3 Media Server</name>
-		<url>http://www.ps3mediaserver.org/</url>
+		<url>https://www.ps3mediaserver.org/</url>
 	</organization>
 
 	<licenses>
 		<license>
 			<name>GNU General Public License version 2</name>
-			<url>http://www.gnu.org/licenses/gpl-2.0.txt</url>
+			<url>https://www.gnu.org/licenses/gpl-2.0.txt</url>
 			<distribution>manual</distribution>
 		</license>
 	</licenses>
@@ -69,7 +69,7 @@
 
 	<issueManagement>
 		<system>Google Code</system>
-		<url>http://code.google.com/p/ps3mediaserver/issues/list</url>
+		<url>https://code.google.com/p/ps3mediaserver/issues/list</url>
 	</issueManagement>
 
 	<properties>
@@ -97,7 +97,7 @@
 
 		<external-resources.directory>${project.basedir}/src/main/external-resources</external-resources.directory>
 		<external-resources.transcode-tools.directory>${external-resources.directory}/transcode-tools</external-resources.transcode-tools.directory>
-		<transcode-tools.download.url>http://downloads.sourceforge.net/project/ps3mediaserver/transcode-tools</transcode-tools.download.url>
+		<transcode-tools.download.url>https://downloads.sourceforge.net/project/ps3mediaserver/transcode-tools</transcode-tools.download.url>
 		<target.transcode-tools.directory>${project.build.directory}/bin</target.transcode-tools.directory>
 		<transcode-tools.linux.filename>transcode-tools-linux-20130701.tar.gz</transcode-tools.linux.filename>
 		<transcode-tools.macosx.filename>transcode-tools-osx-20131106.tar.gz</transcode-tools.macosx.filename>
@@ -105,23 +105,23 @@
 
 		<external-resources.private-jre.directory>${external-resources.directory}/private-jre</external-resources.private-jre.directory>
 
-		<!-- JRE archives direct download links: http://stackoverflow.com/a/12266049 -->
+		<!-- JRE archives direct download links: https://stackoverflow.com/a/12266049 -->
 		<private-jre.windows.x86.filename>jre-7u45-windows-i586.tar.gz</private-jre.windows.x86.filename>
 		<private-jre.windows.x86.archive-directory-name>jre1.7.0_45</private-jre.windows.x86.archive-directory-name>
-		<private-jre.windows.x86.download-url>http://javadl.sun.com/webapps/download/AutoDL?BundleId=81820</private-jre.windows.x86.download-url>
+		<private-jre.windows.x86.download-url>https://javadl.sun.com/webapps/download/AutoDL?BundleId=81820</private-jre.windows.x86.download-url>
 		<private-jre.windows.x64.filename>jre-7u45-windows-x64.tar.gz</private-jre.windows.x64.filename>
 		<private-jre.windows.x64.archive-directory-name>jre1.7.0_45</private-jre.windows.x64.archive-directory-name>
-		<private-jre.windows.x64.download-url>http://javadl.sun.com/webapps/download/AutoDL?BundleId=81822</private-jre.windows.x64.download-url>
+		<private-jre.windows.x64.download-url>https://javadl.sun.com/webapps/download/AutoDL?BundleId=81822</private-jre.windows.x64.download-url>
 		<private-jre.macosx.filename>jre-7u45-macosx-x64.gz</private-jre.macosx.filename>
 		<private-jre.macosx.archive-directory-name>jre1.7.0_45.jre</private-jre.macosx.archive-directory-name>
 
 		<!--
 			The BundleId for the jre-7uXX-macosx-x64.tar.gz is a bit tricky to obtain. Go to
-			http://www.java.com/en/download/manual.jsp, inspect the link for the .dmg and add 1
+			https://www.java.com/en/download/manual.jsp, inspect the link for the .dmg and add 1
 			to the number contained in its BundleId. Then open the link with the new BundleId
 			and verify whether the correct file downloads.
 		-->
-		<private-jre.macosx.download-url>http://javadl.sun.com/webapps/download/AutoDL?BundleId=81814</private-jre.macosx.download-url>
+		<private-jre.macosx.download-url>https://javadl.sun.com/webapps/download/AutoDL?BundleId=81814</private-jre.macosx.download-url>
 		<target.private-jre.x86.directory>${project.build.directory}/jre</target.private-jre.x86.directory>
 		<target.private-jre.x64.directory>${project.build.directory}/jre64</target.private-jre.x64.directory>
 		<private-jre.macosx.directory>${external-resources.transcode-tools.directory}/osx/jre-macosx</private-jre.macosx.directory>
@@ -129,7 +129,7 @@
 		<!-- Windows Service wrapper. -->
 		<windows-service-wrapper.x86.filename>wrapper-windows-x86-32-3.5.17.zip</windows-service-wrapper.x86.filename>
 		<windows-service-wrapper.x86.archive-directory-name>wrapper-windows-x86-32-3.5.17</windows-service-wrapper.x86.archive-directory-name>
-		<windows-service-wrapper.x86.download-url>http://wrapper.tanukisoftware.com/download/3.5.17/wrapper-windows-x86-32-3.5.17.zip</windows-service-wrapper.x86.download-url>
+		<windows-service-wrapper.x86.download-url>https://wrapper.tanukisoftware.com/download/3.5.17/wrapper-windows-x86-32-3.5.17.zip</windows-service-wrapper.x86.download-url>
 
 		<maven-javadoc-plugin-version>2.10.1</maven-javadoc-plugin-version>
 		<git-commit-id-plugin-version>2.1.4</git-commit-id-plugin-version>
@@ -151,7 +151,7 @@
 		<pluginRepository>
 			<id>central</id>
 			<name>Maven Plugin Repository</name>
-			<url>http://repo1.maven.org/maven2</url>
+			<url>https://repo1.maven.org/maven2</url>
 			<layout>default</layout>
 			<snapshots>
 				<enabled>false</enabled>
@@ -163,17 +163,31 @@
 		<pluginRepository>
 			<id>ossrh</id>
 			<name>Sonatype OSS Repository</name>
-			<url>http://oss.sonatype.org/content/groups/public</url>
+			<url>https://oss.sonatype.org/content/groups/public</url>
 			<layout>default</layout>
 		</pluginRepository>
 	</pluginRepositories>
 
 	<repositories>
+		<!-- Central -->
+		<repository>
+			<id>central</id>
+			<name>Maven central</name>
+			<url>https://repo1.maven.org/maven2/</url>
+		</repository>
+
+		<!-- Jenkins -->
+		<repository>
+			<id>Jenkins</id>
+			<name>Jenkins</name>
+			<url>https://repo.jenkins-ci.org/public/</url>
+		</repository>
+
 		<!-- Java.net -->
 		<repository>
 			<id>java.net</id>
 			<name>Java.net Repository</name>
-			<url>http://download.java.net/maven/2/</url>
+			<url>https://download.java.net/maven/2/</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
@@ -182,7 +196,7 @@
 		<!-- netty -->
 		<repository>
 			<id>jboss</id>
-			<url>http://repository.jboss.org/</url>
+			<url>https://repository.jboss.org/</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -215,6 +229,7 @@
 		</repository>
 
 		<!-- for jai-imageio-core-standalone, which is used by Thumbnailator -->
+		<!-- repo is not available
 		<repository>
 			<releases />
 			<snapshots>
@@ -222,14 +237,15 @@
 			</snapshots>
 			<id>mygrid-repository</id>
 			<name>myGrid Repository</name>
-			<url>http://www.mygrid.org.uk/maven/repository</url>
-		</repository>
+			<url>https://www.mygrid.org.uk/maven/repository/</url>
+		</repository> -->
 
 		<!-- Repository where the izpack-maven-plugin and such live -->
+		<!-- repo is not available
 		<repository>
 			<id>codehaus-releases</id>
 			<url>https://nexus.codehaus.org/content/repositories/releases</url>
-		</repository>
+		</repository> -->
 	</repositories>
 
 	<dependencies>
@@ -363,12 +379,12 @@
 
 			https://code.google.com/p/thumbnailator/issues/detail?id=32
 			https://github.com/stain/jai-imageio-core
-			http://stackoverflow.com/questions/1209583/using-java-advanced-imaging-with-maven
+			https://stackoverflow.com/questions/1209583/using-java-advanced-imaging-with-maven
 		-->
 		<dependency>
-			<groupId>net.java.dev.jai-imageio</groupId>
-			<artifactId>jai-imageio-core-standalone</artifactId>
-			<version>1.2-pre-dr-b04-2011-07-04</version>
+			<groupId>com.github.jai-imageio</groupId>
+			<artifactId>jai-imageio-core</artifactId>
+			<version>jai-imageio-1.2-pre-dr-b04-2011-07-04</version>
 		</dependency>
 
 		<dependency>
@@ -402,7 +418,7 @@
 			<version>${cuelib-version}</version>
 		</dependency>
 
-		<!-- XXX: not Mavenized: http://sourceforge.net/projects/mediachest/ -->
+		<!-- XXX: not Mavenized: https://sourceforge.net/projects/mediachest/ -->
 		<dependency>
 			<groupId>mediautil</groupId>
 			<artifactId>mediautil</artifactId>
@@ -552,7 +568,7 @@
 
 								There is an incompatible JNA native library installed on this system.
 						-->
-						<argLine>-Duser.language=en -Djna.nosys=true -XX:-UseSplitVerifier</argLine> <!-- only one argLine element is processed -->
+						<argLine>-Duser.language=en -Djna.nosys=true</argLine> <!-- only one argLine element is processed -->
 					</configuration>
 					<version>2.15</version>
 				</plugin>
@@ -671,6 +687,7 @@
 			<!-- Assemble a jar with dependencies. -->
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.7.1</version>
 				<executions>
 					<execution>
 						<id>make-jar-with-dependencies</id>
@@ -862,7 +879,25 @@
 
 				Checksums can be calculated with "openssl sha1 [filename]".
 
-				See: http://code.google.com/p/maven-external-dependency-plugin/issues/detail?id=8#c4
+				See: https://code.google.com/p/maven-external-dependency-plugin/issues/detail?id=8#c4
+
+				Manual add jars to maven local
+				mvn install:install-file \
+				        -Dfile=src/main/external-resources/lib/cuelib-1.2.1-2008-06-13.jar \
+				 		-DgroupId=jwbroek.cuelib \
+                        -DartifactId=cuelib \
+                        -Dversion=1.2.1-2008-06-13 \
+                        -Dpackaging=jar \
+                        -DgeneratePom=true
+
+				mvn install:install-file \
+				        -Dfile=src/main/external-resources/lib/mediautil-1.0.jar \
+				 		-DgroupId=mediautil \
+                        -DartifactId=mediautil \
+                        -Dversion=1.0 \
+                        -Dpackaging=jar \
+                        -DgeneratePom=true
+
 			-->
 			<plugin>
 				<groupId>com.savage7.maven.plugins</groupId>
@@ -870,7 +905,7 @@
 				<version>0.5</version>
 				<inherited>false</inherited>
 				<configuration>
-					<stagingDirectory>${project.build.directory}/dependencies/</stagingDirectory>
+					<stagingDirectory>${project.basedir}/src/main/external-resources/lib/</stagingDirectory>
 					<createChecksum>true</createChecksum>
 					<skipChecksumVerification>false</skipChecksumVerification>
 					<force>false</force>
@@ -880,7 +915,7 @@
 							<artifactId>cuelib</artifactId>
 							<version>${cuelib-version}</version>
 							<packaging>jar</packaging>
-							<downloadUrl>http://cuelib.googlecode.com/files/cuelib-${cuelib-version}.jar</downloadUrl>
+							<downloadUrl>https://cuelib.googlecode.com/files/cuelib-${cuelib-version}.jar</downloadUrl>
 							<checksum>d03b6b960b3b83a2a419e8b5f07b6ba4bd18387b</checksum>
 						</artifactItem>
 
@@ -891,7 +926,7 @@
 							<packaging>jar</packaging>
 							<install>true</install>
 							<force>false</force>
-							<downloadUrl>http://downloads.sourceforge.net/project/mediachest/MediaUtil/Version%201.0/mediautil-1.zip</downloadUrl>
+							<downloadUrl>https://downloads.sourceforge.net/project/mediachest/MediaUtil/Version%201.0/mediautil-1.zip</downloadUrl>
 							<checksum>aa7ae51bb24a9268a8e57c6afe478c4293f84fda</checksum>
 							<extractFile>mediautil-${mediautil-version}/mediautil-${mediautil-version}.jar</extractFile>
 							<extractFileChecksum>e843cd55def75dce57123c79b7f36caca4841466</extractFileChecksum>
@@ -916,11 +951,49 @@
 						<phase>validate</phase>
 						<goals>
 							<!-- mvn com.savage7.maven.plugins:maven-external-dependency-plugin:resolve-external -->
-							<goal>resolve-external</goal>
+							<!-- <goal>resolve-external</goal> -->
 
 							<!-- mvn com.savage7.maven.plugins:maven-external-dependency-plugin:install-external -->
 							<goal>install-external</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.2</version>
+				<executions>
+					<execution>
+						<id>install-file-cuelib</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<configuration>
+							<file>${project.basedir}/src/main/external-resources/lib/cuelib-1.2.1-2008-06-13.jar</file>
+							<groupId>jwbroek.cuelib</groupId>
+							<artifactId>cuelib</artifactId>
+							<version>1.2.1-2008-06-13</version>
+							<packaging>jar</packaging>
+							<generatePom>true</generatePom>
+						</configuration>
+					</execution>
+					<execution>
+						<id>install-file-mediautil</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<configuration>
+							<file>${project.basedir}/src/main/external-resources/lib/mediautil-1.0.jar</file>
+							<groupId>mediautil</groupId>
+							<artifactId>mediautil</artifactId>
+							<version>1.0</version>
+							<packaging>jar</packaging>
+							<generatePom>true</generatePom>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -984,11 +1057,11 @@
 								</tags>
 								<detectJavaApiLink>false</detectJavaApiLink>
 								<links>
-									<link>http://docs.oracle.com/javase/7/docs/api/</link>
+									<link>https://docs.oracle.com/javase/7/docs/api/</link>
 								</links>
 								<!--
 									Doclet to generate class diagrams inside Javadoc.
-									Requires the installation of Graphviz (http://www.graphviz.org/)
+									Requires the installation of Graphviz (https://www.graphviz.org/)
 								-->
 								<doclet>org.jboss.apiviz.APIviz</doclet>
 								<docletArtifact>
@@ -1124,7 +1197,7 @@
 				<!-- nsis-maven-plugin needs this -->
 				<pluginRepository>
 					<id>Codehaus Snapshots</id>
-					<url>http://nexus.codehaus.org/snapshots/</url>
+					<url>https://nexus.codehaus.org/snapshots/</url>
 					<snapshots>
 						<enabled>true</enabled>
 					</snapshots>
@@ -1566,7 +1639,7 @@
 										<!-- Make all downloaded binaries executable -->
 										<chmod dir="${external-resources.transcode-tools.directory}/osx" perm="a+x" includes="*" excludes="libmediainfo.dylib" />
 
-										<!-- Copy files to IzPack staging directory -->		
+										<!-- Copy files to IzPack staging directory -->
 										<copy file="src/main/izpack/logo.png" todir="${izpack.staging}" overwrite="true" />
 										<copy file="${external-resources.directory}/osx/Info.plist-template-pms" tofile="${izpack.staging}/osx/Info.plist" overwrite="true" />
 										<copy file="${external-resources.directory}/osx/pms.sh" todir="${izpack.staging}/osx" overwrite="true" />
@@ -1652,8 +1725,8 @@
 						</executions>
 					</plugin>
 
-					<!-- IzPack for cross platform packaging (http://izpack.org/) -->
-					<!-- http://docs.codehaus.org/display/IZPACK/Compiling+Using+Maven -->
+					<!-- IzPack for cross platform packaging (https://izpack.org/) -->
+					<!-- https://docs.codehaus.org/display/IZPACK/Compiling+Using+Maven -->
 					<plugin>
 						<groupId>org.codehaus.izpack</groupId>
 						<artifactId>izpack-maven-plugin</artifactId>
